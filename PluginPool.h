@@ -3,7 +3,7 @@
 #include <map>
 #include <mutex>
 #include <memory>
-
+#include "Plugin.h"
 namespace openiam
 {
     class PluginPool

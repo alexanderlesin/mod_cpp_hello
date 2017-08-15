@@ -9,7 +9,9 @@ namespace openiam
     
     int Plugin::processRequest(request_rec* r)
     {
-
+        if(!isEnabled)
+            return 400;
+        return 404;
     }
 
     void Plugin::setEnable(const bool& value)

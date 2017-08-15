@@ -1,5 +1,6 @@
 #pragma once
 
+struct request_rec;
 namespace openiam
 {
     class Plugin

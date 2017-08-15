@@ -1,4 +1,8 @@
 #pragma once
+#include <string>
+#include <map>
+#include <mutex>
+#include <memory>
 
 namespace openiam
 {
@@ -6,9 +10,9 @@ namespace openiam
     {
     private:
         std::map<std::string, std::shared_ptr<Plugin>> pool;
-        std::mutext poolMutex;
+        std::mutex poolMutex;
     
     public:
         std::shared_ptr<Plugin> operator[](const std::string& virtualServerName);
-    }
+    };
 }
